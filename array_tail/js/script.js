@@ -6,7 +6,7 @@ const vElementi = parseInt(prompt("Quanti numeri casuali di quelli generati vuoi
 // validation
 if (isNaN(nElementi) || isNaN(vElementi)) {
     alert("Inserisci valori numerici!");
-} else if (nElementi <= 0 || vElementi <= 0) {
+} else if (nElementi < 0 || vElementi < 0) {
     alert("I numeri inseriti devono essere superiori a 0!");
 } else if (nElementi < vElementi) {
     alert("I numeri da visualizzare non possono essere più di quelli generati!")
@@ -25,7 +25,7 @@ if (isNaN(nElementi) || isNaN(vElementi)) {
         }
         
         // Stampiamo gli elementi dell'Array
-        console.table(`Gli ultimi ${vElementi} numeri casuali generati sono: ${lastElements}`);
+        console.log(`Gli ultimi ${vElementi} numeri casuali generati sono: ${lastElements}`);
 
 };
 

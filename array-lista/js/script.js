@@ -6,15 +6,17 @@ frigorifero.push("pesca");
 console.table(frigorifero);
 
 // possibili esiti ricerca ingrediente cocktail
-const cielo = "Trovato! Devo solo preparare il cocktail.";
-const manca = "Oh no, devo uscire a comprare il cocomero!"
 const isCocomero = "cocomero";
-let esito = manca;
+let esitoRicerca = false;
 
-for (let i = 0; i < frigorifero.length; i++) {
+for (let i = 0; i < frigorifero.length && !esitoRicerca; i++) {
     if (frigorifero[i] === isCocomero) {
-        esito = cielo;
+        esitoRicerca = true;
     }
 }
 
-console.log(esito);
+const message = esitoRicerca 
+? "Trovato! Devo solo preparare il cocktail."
+: "Oh no, devo uscire a comprare il cocomero!"
+
+console.log(message);
